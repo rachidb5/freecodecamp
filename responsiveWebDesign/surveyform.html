@@ -1,3 +1,46 @@
+
+<style>
+
+	body{
+		font-family: sans-serif;
+		font-weight: 500;
+	}
+	header{
+		padding-top: 40px;
+	}
+	#title{
+	display: grid;
+	justify-content: center;
+	color: white;
+	}
+
+	#description{
+		display: grid;
+	justify-content: center;
+	font-size: 1.125rem;
+	color: white;
+	}
+
+	.form-group{
+	display: grid;
+	justify-content: center;
+	padding: 5px;
+	color: white;
+	}
+	form{
+		background-color: rgba(27, 150, 50, 0.8);
+	}
+
+	body{
+		 background-image:linear-gradient(
+      115deg,
+      rgba(58, 158, 58, 0.9),
+      rgba(136, 206, 136, 0.8)
+    ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+	}
+</style>
+
+
 <header>
   <h1 id="title">
     freeCodeCamp Survey Form
@@ -6,3 +49,60 @@
      Thank you for taking the time to help us improve the platform
   </p>
 </header>
+<form id="survey-form">
+	<div class="form-group">	
+		<label id="name-label">Name</label>
+		<input type="text" name="name" id="name" placeholder="Enter your name" required>
+	</div>
+	<div class="form-group">	
+		<label id="email-label">Email</label>
+		<input type="email" name="email" id="email" placeholder="Enter your email" required>
+	</div>
+	<div class="form-group">	
+		<label id="number-label">Age(optional)</label>
+		<input type="number" name="age" id="number" placeholder="Age" min="18" max="99" id="age">
+	</div>
+	<div class="form-group">
+      <p>Which option best describes your current role?</p>
+		<select id="dropdown">
+			<option>Student</option>
+			<option>Full time job</option>
+			<option>Full time learner</option>
+			<option>Preferer not to say</option>
+			<option>Other</option>
+		</select>
+	</div>
+	<div class="form-group">
+      <p>Would you recommend freeCodeCamp to a friend?</p>
+      <label><input type="radio" name="user-recommend" value="definitely"/>Definitely</label>
+      <label><input type="radio" name="user-recommend" value="maybe"/>Maybe</label>
+      <label><input type="radio" name="user-recommend" value="not-sure"/>Not sure</label>
+    </div>
+    <div class="form-group">
+      <p>What is your favorite feature of freeCodeCamp?</p>
+		<select id="dropdown">
+			<option>Challenges</option>
+			<option>Projects</option>
+			<option>Community</option>
+			<option>Open source</option>
+		</select>
+	</div>
+
+	<div class="form-group">
+      <p>What would you like to see improved? (Check all that apply)</p>
+		 <label><input type="checkbox" value="frontend"/>Frontend</label>
+      <label><input type="checkbox" value="backend"/>Backend</label>
+      <label><input type="checkbox" value="data-visualization"/>Data visualization</label>
+	</div>
+
+	 <div class="form-group">
+      <p>Any comments or suggestions?</p>
+		<textarea placeholder="Enter your suggestions"></textarea>
+	</div>
+
+	<div class="form-group">
+      <button type="submit">
+        Submit
+      </button>
+    </div>
+</form>
